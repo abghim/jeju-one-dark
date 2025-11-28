@@ -1,0 +1,237 @@
+
+{
+  "name": "Jeju One Dark",
+
+  "author": "Aiden Ghim",
+
+  "variables": {
+    // Base UI/editor
+    "background": "#262A30",
+    "foreground": "#ACB2BE",
+    "lineHighlight": "#30343B",
+    "selection": "#74ADE83D",
+    "selectionBorder": "#74ADE866",
+    "caret": "#74ADE8",
+    "gutterBackground": "#282C33",
+    "gutterForeground": "#4E5A5F",
+    "gutterForegroundHighlight": "#D0D4DA",
+    "invisibles": "#878A98",
+    "guide": "#C8CCD40D",
+    "activeGuide": "#C8CCD41A",
+    "searchHighlight": "#74ADE866",
+    "findHighlight": "#74ADE866",
+    "findHighlightForeground": "#262A30",
+
+    // Semantic colors from your Zed syntax
+    "comment": "#54846B",
+    "docComment": "#5C9FB2",
+    "constant": "#7BBBD0",
+    "number": "#7BBBD0",
+    "string": "#7BBBD0",
+    "stringEscape": "#54846B",
+    "keyword": "#E88C4C",
+    "tag": "#E88C4C",
+    "function": "#B2A5D0",
+    "type": "#CF8899",
+    "namespace": "#CF8899",
+    "attribute": "#ABB2BF",
+    "property": "#ABB2BF",
+
+    // Diagnostics / VCS-style colors
+    "error": "#D07277",
+    "warning": "#DEC184",
+    "hint": "#788CA6",
+    "info": "#74ADE8",
+    "success": "#A1C181"
+  },
+
+  "globals": {
+    "background": "var(background)",
+    "foreground": "var(foreground)",
+    "caret": "var(caret)",
+
+    "line_highlight": "var(lineHighlight)",
+
+    "selection": "var(selection)",
+    "selection_border": "var(selectionBorder)",
+    "inactive_selection": "#2F343E66",
+    "inactive_selection_border": "#2F343E66",
+
+    "gutter": "var(gutterBackground)",
+    "gutter_foreground": "var(gutterForeground)",
+    "gutter_foreground_highlight": "var(gutterForegroundHighlight)",
+
+    "invisibles": "var(invisibles)",
+
+    "guide": "var(guide)",
+    "active_guide": "var(activeGuide)",
+    "stack_guide": "var(guide)",
+
+    "highlight": "var(searchHighlight)",
+    "find_highlight": "var(findHighlight)",
+    "find_highlight_foreground": "var(findHighlightForeground)",
+
+    "misspelling": "var(error)",
+
+    // Used by some themes for accents (e.g. modified tabs)
+    "accent": "var(keyword)"
+  },
+
+  "rules": [
+    // Comments
+    {
+      "name": "Comments",
+      "scope": "comment",
+      "foreground": "var(comment)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Doc Comments",
+      "scope": "comment.documentation, comment.block.documentation",
+      "foreground": "var(docComment)",
+      "font_style": "italic"
+    },
+
+    // Strings
+    {
+      "name": "Strings",
+      "scope": "string",
+      "foreground": "var(string)"
+    },
+    {
+      "name": "String Escape",
+      "scope": "constant.character.escape, constant.character.escape.*",
+      "foreground": "var(stringEscape)",
+      "font_style": "bold"
+    },
+
+    // Numbers & constants
+    {
+      "name": "Numbers",
+      "scope": "constant.numeric",
+      "foreground": "var(number)"
+    },
+    {
+      "name": "Constants",
+      "scope": "constant, variable.other.constant",
+      "foreground": "var(constant)"
+    },
+
+    // Keywords & preprocessor
+    {
+      "name": "Keywords",
+      "scope": "keyword, storage.type, storage.modifier",
+      "foreground": "var(keyword)",
+      "font_style": "bold"
+    },
+    {
+      "name": "Preprocessor / Directives",
+      "scope": "meta.preprocessor, keyword.control.import, keyword.control.directive",
+      "foreground": "var(constant)",
+      "font_style": "italic"
+    },
+
+    // Functions
+    {
+      "name": "Function Names",
+      "scope": "entity.name.function, meta.function-call, variable.function",
+      "foreground": "var(function)"
+    },
+    {
+      "name": "Function Parameters",
+      "scope": "variable.parameter",
+      "foreground": "var(foreground)"
+    },
+
+    // Types & namespaces
+    {
+      "name": "Types",
+      "scope": "storage.type, entity.name.type, support.type, support.class",
+      "foreground": "var(type)"
+    },
+    {
+      "name": "Namespaces",
+      "scope": "entity.name.namespace, support.other.namespace",
+      "foreground": "var(namespace)"
+    },
+    {
+      "name": "Classes & Structs",
+      "scope": "entity.name.class, entity.name.struct, entity.name.enum",
+      "foreground": "var(type)"
+    },
+
+    // Tags & attributes (HTML, XML, JSX, etc.)
+    {
+      "name": "Tags",
+      "scope": "entity.name.tag, meta.tag.sgml, meta.tag, punctuation.definition.tag",
+      "foreground": "var(tag)"
+    },
+    {
+      "name": "Attributes",
+      "scope": "entity.other.attribute-name",
+      "foreground": "var(attribute)"
+    },
+
+    // Properties (CSS / JS / etc.)
+    {
+      "name": "Object / CSS Properties",
+      "scope": "variable.other.property, meta.property-name, support.type.property-name",
+      "foreground": "var(property)"
+    },
+
+    // Variables
+    {
+      "name": "Variables",
+      "scope": "variable, variable.other",
+      "foreground": "var(foreground)"
+    },
+
+    // JSON keys, etc.
+    {
+      "name": "Keys",
+      "scope": "meta.object-literal.key, meta.mapping.key, support.type.property-name.json",
+      "foreground": "var(property)"
+    },
+
+    // Punctuation
+    {
+      "name": "Punctuation",
+      "scope": "punctuation, punctuation.definition",
+      "foreground": "var(foreground)"
+    },
+
+    // Diagnostics (errors, warnings, etc.)
+    {
+      "name": "Errors",
+      "scope": "invalid, invalid.illegal",
+      "foreground": "var(error)"
+    },
+    {
+      "name": "Warnings",
+      "scope": "invalid.deprecated, markup.deleted",
+      "foreground": "var(warning)"
+    },
+    {
+      "name": "Info / Hints",
+      "scope": "markup.inserted, markup.changed",
+      "foreground": "var(info)"
+    },
+
+    // Diff / Git-ish scopes
+    {
+      "name": "Git Added",
+      "scope": "markup.inserted.git_gutter, markup.inserted.diff",
+      "foreground": "var(success)"
+    },
+    {
+      "name": "Git Modified",
+      "scope": "markup.changed.git_gutter, markup.changed.diff",
+      "foreground": "var(warning)"
+    },
+    {
+      "name": "Git Deleted",
+      "scope": "markup.deleted.git_gutter, markup.deleted.diff",
+      "foreground": "var(error)"
+    }
+  ]
+}

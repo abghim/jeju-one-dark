@@ -1,0 +1,7 @@
+id = "jeju-one-dark"
+name = "Jeju One Dark"
+version = "0.0.1"
+schema_version = 1
+authors = ["Aiden Ghim"]
+description = "Syntax highlighting that resembles the beautiful nature of Jeju Island, Korea. Based on Zed's default One Dark theme."
+

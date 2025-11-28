@@ -1,0 +1,38 @@
+
+{
+  "name": "Jeju One Dark",
+  "type": "dark",
+  "semanticHighlighting": true,
+
+  "colors": {
+    "editor.background": "#282C33FF",
+    "editor.lineHighlightBackground": "#2F343EFF",
+    "tab.activeBackground": "#282C33FF",
+    "tab.inactiveBackground": "#2F343EFF",
+    "sideBar.background": "#2F343EFF",
+    "panel.background": "#2F343EFF",
+    "activityBar.background": "#3B414DFF",
+    "titleBar.activeBackground": "#3B414DFF",
+    "statusBar.background": "#3B414DFF",
+    "terminal.background": "#282C33FF",
+    "scrollbarSlider.background": "#C8CCD44C",
+    "scrollbarSlider.hoverBackground": "#363C46FF",
+    "scrollbarSlider.activeBackground": "#363C46FF"
+  },
+
+  "tokenColors": [
+    { "scope": ["comment", "punctuation.definition.comment"],           "settings": { "foreground": "#54846B"  } },
+    { "scope": ["comment.block.documentation"],                          "settings": { "foreground": "#5C9FB2" } },
+    { "scope": ["keyword", "storage.type", "entity.name.tag"],           "settings": { "foreground": "#E88C4C" } },
+    { "scope": ["constant", "constant.numeric"],                         "settings": { "foreground": "#7BBBD0" } },
+    { "scope": ["entity.name.function", "support.function"],             "settings": { "foreground": "#B2A5D0" } },
+    { "scope": ["entity.name.type", "support.type", "entity.name.namespace"],
+                                                                        "settings": { "foreground": "#CF8899" } },
+    { "scope": ["string"],                                               "settings": { "foreground": "#7BBBD0" } },
+    { "scope": ["string.escape"],                                        "settings": { "foreground": "#54846B" } },
+    { "scope": ["variable.other.property", "variable.other.object"],     "settings": { "foreground": "#ABB2BF" } },
+    { "scope": ["meta.attribute", "entity.other.attribute-name"],        "settings": { "foreground": "#ABB2BF" } },
+    { "scope": ["operator"],        "settings": { "foreground": "#ABB2BF" } }
+  ]
+
+}

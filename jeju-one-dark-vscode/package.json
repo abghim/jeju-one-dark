@@ -1,0 +1,19 @@
+{
+  "name": "jeju-one-dark",
+  "displayName": "Jeju One Dark",
+  "description": "Zed's default One Dark theme with syntax highlights crafted from beautiful colorschemes of Jeju Island, Korea",
+  "version": "0.0.1",
+  "publisher": "abghim",
+  "engines": { "vscode": "^1.65.0" },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Jeju One Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/jeju-one-dark.json"
+      }
+    ]
+  }
+}
+
