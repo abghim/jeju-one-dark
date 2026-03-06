@@ -1,6 +1,8 @@
 # Jeju One Dark
 An elegant theme for syntax highlights and UI styles, easy on the eyes. The color palette resembles the beautiful landscape of Jeju Island, Korea.
 
+## The Palette
+<img width="1552" src="assets/palette.png">
 
 ## Sublime Text
 Straightforward json configuration. Copy the scheme provided under `jeju-one-dark-sublime/` to your Packages directory, then load. I am open to publishing this on Package Control very soon.
