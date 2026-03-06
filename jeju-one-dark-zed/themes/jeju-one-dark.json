@@ -212,10 +212,10 @@
             "color": "#E88C4C"
           },
           "number": {
-            "color": "#7BBBD0"
+            "color": "#94dff7"
           },
           "function": {
-            "color": "#B2A5D0"
+            "color": "#CABBED"
           },
           "type": {
             "color": "#CF8899"
@@ -224,7 +224,7 @@
             "color": "#CF8899"
           },
           "string": {
-            "color": "#7BBBD0"
+            "color": "#94dff7"
           },
           "string.escape": {
             "color": "#54846B"
