@@ -87,5 +87,62 @@
       </article>
     </section>
   </main>
+  <script>
+    (() => {
+      const swatches = document.querySelectorAll(".swatch");
+
+      async function copyHex(hex) {
+        if (!hex) return;
+        try {
+          await navigator.clipboard.writeText(hex);
+        } catch (_err) {
+          const temp = document.createElement("textarea");
+          temp.value = hex;
+          temp.setAttribute("readonly", "");
+          temp.style.position = "fixed";
+          temp.style.opacity = "0";
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand("copy");
+          temp.remove();
+        }
+      }
+
+      function showRipple(swatch, event) {
+        const rect = swatch.getBoundingClientRect();
+        const diameter = Math.max(rect.width, rect.height) * 1.65;
+        const ripple = document.createElement("span");
+        ripple.className = "ripple";
+        ripple.style.width = `${diameter}px`;
+        ripple.style.height = `${diameter}px`;
+        ripple.style.left = `${event.clientX - rect.left}px`;
+        ripple.style.top = `${event.clientY - rect.top}px`;
+        swatch.appendChild(ripple);
+        ripple.addEventListener("animationend", () => ripple.remove(), { once: true });
+      }
+
+      function flashCopied(code) {
+        if (!code) return;
+        const original = code.dataset.hex || code.textContent.trim();
+        code.dataset.hex = original;
+        code.textContent = "COPIED!";
+        if (code._copiedTimer) clearTimeout(code._copiedTimer);
+        code._copiedTimer = setTimeout(() => {
+          code.textContent = original;
+          code._copiedTimer = null;
+        }, 900);
+      }
+
+      swatches.forEach((swatch) => {
+        swatch.addEventListener("click", (event) => {
+          const code = swatch.querySelector("code");
+          const hex = code ? (code.dataset.hex || code.textContent.trim()) : "";
+          copyHex(hex);
+          flashCopied(code);
+          showRipple(swatch, event);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

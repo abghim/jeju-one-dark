@@ -98,6 +98,10 @@ h1 {
   justify-content: space-between;
   flex-direction: column;
   padding: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
 }
 
 .swatch span {
@@ -120,6 +124,10 @@ h1 {
   color: var(--c4);
 }
 
+.swatch.dark {
+  color: var(--c4);
+}
+
 .swatch.dark code {
   color: var(--c4);
 }
@@ -128,8 +136,36 @@ h1 {
   color: var(--b1);
 }
 
+.swatch.light {
+  color: var(--b1);
+}
+
 .swatch.light code {
   color: var(--c4);
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: currentColor;
+  opacity: 0.33;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple-burst 560ms ease-out forwards;
+  z-index: 0;
+}
+
+.swatch > span:not(.ripple),
+.swatch > code {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes ripple-burst {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 620px) {
