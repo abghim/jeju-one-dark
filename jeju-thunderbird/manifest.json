@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "Jeju One Dark for Thunderbird",
+  "version": "0.1",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "aiden@abgh.im",
+      "strict_min_version": "60.0"
+    }
+  },
+  "description": "Calmer emails amidst volcanic Jeju.",
+  "theme": {
+    "colors": {
+      "frame": "#14191f",
+      "tab_text": "#efefef",
+      "tab_line": "#F7B5C7",
+	  "tab_selected": "#262a30",
+      "tab_loading": "#F7B5C7",
+      "tab_background_text": "#efefef",
+	  "toolbar": "#14191f",
+      "toolbar_field": "#14191f",
+      "toolbar_field_text": "#eeeede",
+      "toolbar_field_highlight": "#262a30",
+      "toolbar_field_highlight_text": "#eeeede",
+      "toolbar_field_border": "#F7A967",
+      "toolbar_field_focus": "#262a30",
+      "toolbar_field_text_focus": "#eeeede",
+      "toolbar_field_border_focus": "#CABBED",
+	  "toolbar_top_separator": "#1c2228",
+      "sidebar": "#262A30",
+      "sidebar_text": "#eee",
+      "sidebar_highlight": "#cabbed",
+      "sidebar_highlight_text": "#000",
+      "sidebar_border": "#20232B",
+      "popup": "#262a30",
+      "popup_text": "#eee",
+      "popup_border": "#333",
+      "popup_highlight": "#cabbed",
+      "popup_highlight_text": "#000"
+    }
+  }
+}
